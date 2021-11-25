@@ -1,0 +1,68 @@
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url(../fonts/webfonts/fa-regular-400.eot);
+  src: url(../fonts/webfonts/fa-regular-400d41d.eot?#iefix) format("embedded-opentype"),
+  url(../fonts/webfonts/fa-regular-400.woff2) format("woff2"),
+  url(../fonts/webfonts/fa-regular-400.woff) format("woff"),
+  url(../fonts/webfonts/fa-regular-400.ttf) format("truetype"),
+  url(../fonts/webfonts/fa-regular-400.svg#fontawesome) format("svg")
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url(../fonts/webfonts/fa-solid-900.eot);
+  src: url(../fonts/webfonts/fa-solid-900d41d.eot?#iefix) format("embedded-opentype"),
+  url(../fonts/webfonts/fa-solid-900.woff2) format("woff2"),
+  url(../fonts/webfonts/fa-solid-900.woff) format("woff"),
+  url(../fonts/webfonts/fa-solid-900.ttf) format("truetype"),
+  url(../fonts/webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+.border-t-r-radius {
+  border-bottom-right-radius: 5px;
+}
+
+.border-t-l-radius {
+  border-bottom-left-radius: 5px;
+}
+
+.flex-column-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.fas {
+  font-size: 15px;
+  color: white;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900
+}
+
+.fa-cloud-upload-alt:before {
+  content: "\f382"
+}
+
+.fa-undo:before {
+  content: "\f0e2"
+}
+
+.fa-redo:before {
+  content: "\f01e"
+}

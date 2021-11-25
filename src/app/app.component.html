@@ -1,0 +1,9 @@
+<div class="app-container">
+  <app-cropper
+    #avatarUploader
+    [options]="avatarUploaderOptions">
+  </app-cropper>
+  <p *ngIf="!avatarUploader.cropping && !avatarUploader.uploadedInfo.id">
+    * لطفا تصویر را وارد کنید.
+  </p>
+</div>

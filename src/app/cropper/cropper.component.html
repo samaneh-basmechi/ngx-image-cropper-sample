@@ -1,0 +1,79 @@
+<div>
+  <img *ngIf="uploadedInfo.id && !cropping && isBase64"
+       [src]="uploadedInfo.image"
+       (click)="clickUploadInput()"
+       class="image uploaded-image"/>
+
+  <div *ngIf="!cropping"
+       [hidden]="hideLabels"
+       class="btn btn-primary cursor-pointer">
+    <label for="{{thisId}}">
+      انتخاب تصویر
+      {{options.additionalTitle}}
+    </label>
+  </div>
+</div>
+
+<div *ngIf="cropping" class="cropper">
+  <div class="image-cropper mx-3"
+       (click)="clickUploadInput()">
+    <img *ngIf="croppedImage"
+         [src]="croppedImage"
+         class="image"/>
+  </div>
+  <div class="image-cropper">
+    <image-cropper
+            [transform]="transform"
+            [canvasRotation]="canvasRotation"
+            [imageChangedEvent]="imageChangedEvent"
+            [maintainAspectRatio]="true"
+            [aspectRatio]="options.aspectRatio"
+            [roundCropper]="roundCropper"
+            [imageQuality]="options.imageQuality"
+            [resizeToWidth]="options.resizeTo"
+            [format]="cropperFormat"
+            (loadImageFailed)="loadImageFailed()"
+            (imageCropped)="imageCropped($event)">
+    </image-cropper>
+    <ul class="button-set-box">
+      <li class="btn-danger" (click)="cancel()">
+        انصراف
+      </li>
+      <li (click)="rotateLeft()">
+        <i class="fas fa-undo"></i>&nbsp;
+      </li>
+      <li (click)="resetImage()">
+        بازگردانی
+      </li>
+      <li (click)="rotateRight()">
+        <i class="fas fa-redo"></i>
+      </li>
+      <li class="btn-primary" (click)="save()">
+        <span *ngIf="!isBase64">تایید و بارگذاری</span>
+        <span *ngIf="isBase64">تایید</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div *ngFor="let item of uploader.queue" class="progress-box">
+  <div *ngIf="item.progress" class="position-relative">
+    <div *ngIf="item.progress === 100" class="onUploading text-white">در حال تکمیل</div>
+    <div *ngIf="item.progress !== 100" class="onUploading">در حال بارگذاری...</div>
+    <div class="progress">
+      <div [ngStyle]="{ 'width': item.progress + '%' }" class="progress-bar "
+           [ngClass]="item.progress === 100 ? 'bg-success' : 'bg-info'" role="progressbar">
+      </div>
+    </div>
+  </div>
+</div>
+
+<input accept="{{fileFormats}}"
+       [uploader]="uploader"
+       (change)="fileChangeEvent($event)"
+       id="{{thisId}}"
+       hidden
+       type="file"
+       ng2FileSelect/>
+
+<canvas hidden id="canvas{{thisId}}"></canvas>

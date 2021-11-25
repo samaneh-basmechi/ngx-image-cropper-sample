@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'yekan';
+  src: url(/assets/fonts/yekanbakh/eot/YekanBakh-Medium.eot);
+  src: url(/assets/fonts/yekanbakh/eot/YekanBakh-Medium.eot#iefix) format("embedded-opentype"),
+  url(/assets/fonts/yekanbakh/woff/YekanBakh-Medium.woff) format("woff"),
+  url(/assets/fonts/yekanbakh/ttf/YekanBakh-Medium.ttf) format("truetype")
+}
+body {
+  background-color: lightgray !important;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'yekan', sans-serif !important;
+}

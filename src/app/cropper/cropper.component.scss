@@ -1,0 +1,79 @@
+@import "src/assets/custom-styles/custome";
+
+::ng-deep.cropper.rounded:after {
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, .5) !important;
+}
+
+.cropper {
+  display: flex;
+  justify-content: space-between;
+
+  .image-cropper {
+    @extend .flex-column-center;
+    padding: 20px;
+    border: 2px dashed darkgrey;
+    @extend .border-radius;
+
+    image-cropper{
+      margin-top: 15px;
+    }
+
+    .button-set-box {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      :not(:first-child):not(:last-child) {
+        background-color: black;
+      }
+
+      :last-child {
+        color: white;
+        @extend .border-t-r-radius;
+      }
+
+      :first-child {
+        @extend .border-t-l-radius;
+      }
+
+      > li {
+        padding: 5px 20px 5px 20px;
+        color: white;
+        @extend .cursor-pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+      }
+
+    }
+  }
+
+}
+
+.onUploading {
+  position: absolute;
+  left: 50%;
+  top: 1px;
+  margin-left: -35px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.uploaded-image {
+  width: 100px;
+  height: 100px;
+}
+
+.image {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progress-box {
+  margin: 15px 10px 15px 10px;
+  text-align: center;
+  width: 100%;
+}
