@@ -1,0 +1,1 @@
+# ngx-image-cropper-sample
