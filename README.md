@@ -1,4 +1,4 @@
-# Map
+# ngx-image-cropper-sample
 
 ## Demo
 
