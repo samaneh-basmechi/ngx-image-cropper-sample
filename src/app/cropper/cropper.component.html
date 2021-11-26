@@ -1,4 +1,5 @@
 <div>
+
   <img *ngIf="uploadedInfo.id && !cropping && isBase64"
        [src]="uploadedInfo.image"
        (click)="clickUploadInput()"
@@ -12,15 +13,18 @@
       {{options.additionalTitle}}
     </label>
   </div>
+
 </div>
 
 <div *ngIf="cropping" class="cropper">
+
   <div class="image-cropper mx-3"
        (click)="clickUploadInput()">
     <img *ngIf="croppedImage"
          [src]="croppedImage"
          class="image"/>
   </div>
+
   <div class="image-cropper">
     <image-cropper
             [transform]="transform"
@@ -54,6 +58,7 @@
       </li>
     </ul>
   </div>
+
 </div>
 
 <div *ngFor="let item of uploader.queue" class="progress-box">

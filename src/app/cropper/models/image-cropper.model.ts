@@ -7,6 +7,7 @@ export class ImageCropperOptions implements ImageCropperInterface{
   resizeTo = 400;
   aspectRatio = 1 / 1;
 }
+
 export class ImageCropperUploadedInfo implements ImageCropperUploadedInfoInterface {
   id = 0;
   image = '';

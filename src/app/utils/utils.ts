@@ -10,17 +10,14 @@ export class Utils {
 
   static dateString() {
     const currentdate = new Date();
-    const datetime =
-      String(currentdate.getFullYear()) +
+    return String(currentdate.getFullYear()) +
       String(currentdate.getMonth() + 1) +
       String(currentdate.getDate()) +
       '-' +
       String(currentdate.getHours()) +
       String(currentdate.getMinutes()) +
       String(currentdate.getSeconds());
-    return datetime;
   }
-
   //#endregion
 
 }
