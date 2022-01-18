@@ -5,6 +5,10 @@
 ![til](./src/assets/images/Demo.png)
 
 
+## Demo Link
+https://ngx-image-cropper-sample.netlify.app
+
+
 ## Usage
 
 Go to base directory and 
@@ -31,3 +35,4 @@ Navigate to `http://localhost:4200/`. The app will automatically reload if you c
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
