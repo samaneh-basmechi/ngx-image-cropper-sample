@@ -1,4 +1,4 @@
-# ngx-image-cropper-sample
+# ngx-image-cropper-sample (Angular)
 
 ## Demo
 
